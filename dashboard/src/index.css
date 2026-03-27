@@ -1,14 +1,193 @@
 @import 'tailwindcss';
 
-
 :root {
-  --primary: #4f46e5;
-  --primary-hover: #4338ca;
-  --primary-active: #3730a3;
+  /* ── Backgrounds ── */
+  /*--st-bg:            #FAFAF8;   /* page / app shell */
+  --st-bg:            #f5f4f1;   /* page / app shell */
+  --st-surface:       #FFFFFF;   /* cards, panels, editor */
+  --st-surface-raised:#F3F2EE;   /* hover rows, subtle inset */
+
+  --st-card:          #f0efec;  /* cards are on surface */
+  --st-card-secondary:          #F0EEE8;  /* cards are on surface */
+
+
+  --st-surface-dark: #2f2f36;
+  --st-surface-dark-text: #fff;
+
+  /* ── Borders ── */
+  --st-border:        #d5d3ce;   /* default dividers */
+  --st-border-strong: #D0CEC8;   /* focused inputs, active outlines */
+
+  /* ── Text ── */
+  --st-text:          #2F2F36;   /* primary — your existing ink */
+  --st-text-muted:    #7A7870;   /* timestamps, labels, hints */
+  --st-text-faint:    #B0AEA8;   /* placeholders, disabled */
+
+  /* ── Primary (Sage green — calm, focused, note-takey) ── */
+  --st-primary:   #6750a4;   /* ~15% darker */
+  --st-primary-hover:         #7965af;   /* Odoo enterprise exact */
+  --st-primary-text:    #fff;   /* dark enough on tint */
+  --st-primary-tint:    #e3dded;   /* very light wash */
+  --st-primary-tint-text:    #111118;
+
+
+    /* ── Secondary (Warm sand — neutral actions, tags) ── */
+  --st-secondary:   #444545;   /* ~15% darker */
+  --st-secondary-hover:         #30323D;   /* Odoo enterprise exact */
+  --st-secondary-text:    #fff;   /* dark enough on tint */
+  --st-secondary-tint:    #d9d9d9;   /* very light wash */
+  --st-secondary-tint-text:    #111118;
+
+  /* ── Secondary (Warm sand — neutral actions, tags) ── */
+  --st-accent:   #4285c9;   /* ~15% darker */
+  --st-accent-hover:         #3877b4;   /* Odoo enterprise exact */
+  --st-accent-text:    #fff;   /* dark enough on tint */
+  --st-accent-tint:    #cddae6;   /* very light wash */
+  --st-accent-tint-text:    #111118;
+
+
+  --st-selection-bg: #D6D1CD;   /* text selection background */
+  --st-selection-text: #000;    /* text selection text */
+  /* ── Semantic ── */
+
+  /* Success — sage green, same family as original primary */
+  --st-success:         #4A7C6F;
+  --st-success-hover:   #3D6B5F;
+  --st-success-text:    #fff;
+  --st-success-tint:    #EEF4F0;
+  --st-success-tint-text:    #000;
+
+  /* Warning — warm ochre, leans toward secondary sand */
+  --st-warning:         #F6AE2D;
+  /**E0E000 */
+  /* --st-warning:         #F6AE2D; */
+  --st-warning-hover:   #EFCC95;
+  --st-warning-text:    #000;
+  --st-warning-tint:    #f4e9d6;
+  --st-warning-tint-text:    #000;
+
+  /* Danger — clay red, warm brown undertone */
+  --st-danger:          #B75D69;
+  --st-danger-hover:    #aa4a57;
+  --st-danger-text:     #fff;
+  --st-danger-tint:     #e7d5d7;
+  --st-danger-tint-text:     #2F2F36;
+
+  /* Info — mirrors primary */
+  --st-info:            #3877b4;
+  --st-info-hover:      #004182;
+  --st-info-text:       #fff;
+  --st-info-tint:       #cddae6;
+  --st-info-tint-text:       #2F2F36;
+
+
+  --st-input: #fff;
+  --st-input-focus: #f3f3f3;
+  --st-input-border: #e7e6e4;
+  --st-input-border-focus: #444545;
+  /**f0eee8 */
 }
 
 @theme inline {
-  --color-primary: var(--primary);
-  --color-primary-hover: var(--primary-hover);
-  --color-primary-active: var(--primary-active);
+  --color-st-bg:              var(--st-bg);
+  --color-st-surface:         var(--st-surface);
+  --color-st-surface-raised:  var(--st-surface-raised);
+
+  --color-st-card:          var(--st-card);  /* cards are on surface */
+  --color-st-card-secondary:          var(--st-card-secondary);
+
+  --color-st-border:          var(--st-border);
+  --color-st-border-strong:   var(--st-border-strong);
+
+  --color-st-text:            var(--st-text);
+  --color-st-text-muted:      var(--st-text-muted);
+  --color-st-text-faint:      var(--st-text-faint);
+
+  --color-st-primary:         var(--st-primary);
+  --color-st-primary-hover:   var(--st-primary-hover);
+  --color-st-primary-text:    var(--st-primary-text);
+  --color-st-primary-tint:    var(--st-primary-tint);
+  --color-st-primary-tint-text:    var(--st-primary-tint-text);
+
+  --color-st-secondary:       var(--st-secondary);
+  --color-st-secondary-hover: var(--st-secondary-hover);
+  --color-st-secondary-text:  var(--st-secondary-text);
+  --color-st-secondary-tint:  var(--st-secondary-tint);
+  --color-st-secondary-tint-text:  var(--st-secondary-tint-text);
+
+  --color-st-accent:       var(--st-accent);
+  --color-st-accent-hover: var(--st-accent-hover);
+  --color-st-accent-text:  var(--st-accent-text);
+  --color-st-accent-tint:  var(--st-accent-tint);
+  --color-st-accent-tint-text:  var(--st-accent-tint-text);
+
+  --color-st-surface-dark: var(--st-surface-dark);
+  --color-st-surface-dark-text: var(--st-surface-dark-text);
+
+    /* Semantic */
+  --color-st-success:           var(--st-success);
+  --color-st-success-hover:     var(--st-success-hover);
+  --color-st-success-text:      var(--st-success-text);
+  --color-st-success-tint:      var(--st-success-tint);
+  --color-st-success-tint-text:      var(--st-success-tint-text);
+
+  --color-st-warning:           var(--st-warning);
+  --color-st-warning-hover:     var(--st-warning-hover);
+  --color-st-warning-text:      var(--st-warning-text);
+  --color-st-warning-tint:      var(--st-warning-tint);
+  --color-st-warning-tint-text:      var(--st-warning-tint-text);
+
+  --color-st-danger:            var(--st-danger);
+  --color-st-danger-hover:      var(--st-danger-hover);
+  --color-st-danger-text:       var(--st-danger-text);
+  --color-st-danger-tint:       var(--st-danger-tint);
+  --color-st-danger-tint-text:       var(--st-danger-tint-text);
+
+  --color-st-info:              var(--st-info);
+  --color-st-info-hover:        var(--st-info-hover);
+  --color-st-info-text:         var(--st-info-text);
+  --color-st-info-tint:         var(--st-info-tint);
+  --color-st-info-tint-text:         var(--st-info-tint-text);
+
+  --color-st-selection-bg: var(--st-selection-bg);
+  --color-st-selection-text: var(--st-selection-text);
+
+  --color-st-input: var(--st-input);
+  --color-st-input-focus: var(--st-input-focus);
+  --color-st-input-border: var(--st-input-border);
+  --color-st-input-border-focus: var(--st-input-border-focus);
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+}
+
+@font-face {
+  font-family: 'inter';
+  src: url('./assets/fonts/inter.ttf') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background-color: var(--st-selection-bg);
+  color: var(--st-selection-text);
+}
+
+.st-overlay {
+  background-color: rgba(0, 0, 0, 0.38);
+}
+
+
+.canvas-dotted-background {
+  background-image: radial-gradient(#c1bfba 1px, transparent 1px);
+  background-size: 12px 12px;
 }

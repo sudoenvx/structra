@@ -1,10 +1,13 @@
-function App() {
+import { Button } from "@ui/button"
+import { Card } from "./components/ui/card"
+import FormBuilderContainer from "./modules/form-builder/components/form-builder-container"
+import FormItemEditor from "./modules/form-builder/components/form-item-editor"
 
+function App() {
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold text-primary">
-        Structra — Data Intake & Workflow Platform
-      </h1>
+    <div className="flex gap-3 h-full w-full">
+      <FormBuilderContainer />
+      <FormItemEditor />
     </div>
   )
 }
