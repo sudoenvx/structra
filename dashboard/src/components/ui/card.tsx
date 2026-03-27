@@ -18,7 +18,7 @@ export function Card({
   }
 
   return (
-    <div className={`${variantStyles[variant]} px-2 py-2 rounded-sm ${className}`} {...props}>
+    <div className={`${variantStyles[variant]} px-2.5 py-2.5 rounded-sm ${className}`} {...props}>
       {children}
     </div>
   )

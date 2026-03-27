@@ -1,3 +1,4 @@
+import DashboardActivityBar from "./dashboard-activity-bar"
 import DashboardNavbar from "./dashboard-navbar"
 
 interface DashboardLayoutProps {
@@ -6,10 +7,13 @@ interface DashboardLayoutProps {
 
 const DashboardLayout = ({ children }: DashboardLayoutProps) => {
   return (
-    <div className="flex flex-col">
-        <DashboardNavbar />
-        <div className="flex-1">
-            {children}
+    <div className="flex h-full">
+        <DashboardActivityBar />
+        <div className="flex flex-col flex-1">
+            <DashboardNavbar />
+            <div className="flex-1 overflow-auto">
+                {children}
+            </div>
         </div>
     </div>
   )

@@ -35,7 +35,7 @@ const tintVariantClasses: Record<ButtonVariant, string> = {
     'bg-st-secondary-tint text-st-secondary-tint-text hover:bg-st-secondary hover:text-st-secondary-text',
   accent: 'bg-st-accent-tint text-st-accent-tint-text hover:bg-st-accent hover:text-st-accent-text',
   ghost:
-    'bg-transparent text-st-text border border-st-border hover:bg-[#E7E5DF] hover:text-st-text',
+    'bg-transparent text-st-text  hover:bg-[#E7E5DF] hover:text-st-text',
   danger: 'bg-st-danger-tint text-st-danger-tint-text hover:bg-st-danger hover:text-st-danger-text',
   neutral:
     'bg-transparent text-st-text border border-st-border-strong hover:bg-st-surface-raised hover:text-st-text'
@@ -116,7 +116,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {loading ? (
           <Loader2 className={`animate-spin ${spinnerSizeClasses[size]}`} />
         ) : leftIcon ? (
-          <span className="shrink-0 inline-flex items-center [&>svg]:w-[1em] [&>svg]:h-[1em]">
+          <span className="shrink-0 inline-flex items-center [&>svg]:w-[1.1em] [&>svg]:h-[1.1em]">
             {leftIcon}
           </span>
         ) : null}
@@ -124,7 +124,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {children && <span className={loading ? 'opacity-70' : undefined}>{children}</span>}
 
         {!loading && rightIcon && (
-          <span className="shrink-0 inline-flex items-center [&>svg]:w-[1em] [&>svg]:h-[1em]">
+          <span className="shrink-0 inline-flex items-center [&>svg]:w-[1.1em] [&>svg]:h-[1.1em]">
             {rightIcon}
           </span>
         )}

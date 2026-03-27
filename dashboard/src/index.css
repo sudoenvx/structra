@@ -5,6 +5,7 @@
   /*--st-bg:            #FAFAF8;   /* page / app shell */
   --st-bg:            #e8e8e8;   /* page / app shell */
   --st-bg:            #7965af;   /* page / app shell */
+  --st-bg:            #444545;   /* page / app shell */
   --st-surface:       #FFFFFF;   /* cards, panels, editor */
   --st-surface-raised:#F3F2EE;   /* hover rows, subtle inset */
 
@@ -35,7 +36,7 @@
     /* ── Secondary (Warm sand — neutral actions, tags) ── */
   --st-secondary:   #444545;   /* ~15% darker */
   --st-secondary-hover:         #30323D;   /* Odoo enterprise exact */
-  --st-secondary-text:    #fff;   /* dark enough on tint */
+  --st-secondary-text:    #ececec;   /* dark enough on tint */
   --st-secondary-tint:    #d9d9d9;   /* very light wash */
   --st-secondary-tint-text:    #111118;
 
@@ -84,8 +85,9 @@
 
   --st-input: #fff;
   --st-input-focus: #f3f3f3;
-  --st-input-border: #e7e6e4;
-  --st-input-border-focus: #444545;
+  --st-input-border: #d5d3ce;
+  --st-input-border-focus: #79747e;
+  --st-input-border-focus: #a7a7a7;
   /**f0eee8 */
 }
 
