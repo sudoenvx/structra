@@ -3,7 +3,8 @@
 :root {
   /* ── Backgrounds ── */
   /*--st-bg:            #FAFAF8;   /* page / app shell */
-  --st-bg:            #f5f4f1;   /* page / app shell */
+  --st-bg:            #e8e8e8;   /* page / app shell */
+  --st-bg:            #7965af;   /* page / app shell */
   --st-surface:       #FFFFFF;   /* cards, panels, editor */
   --st-surface-raised:#F3F2EE;   /* hover rows, subtle inset */
 

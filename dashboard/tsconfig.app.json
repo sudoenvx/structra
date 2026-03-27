@@ -23,6 +23,8 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
+    "noImplicitAny": true,
+    "noUncheckedIndexedAccess": true,
 
     /* Paths */
     "paths": {

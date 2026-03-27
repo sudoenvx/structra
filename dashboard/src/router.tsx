@@ -1,19 +1,20 @@
 import { createRootRoute, createRoute, createRouter } from '@tanstack/react-router'
+import Dashboard from './modules/dashboard/pages/dashboard'
 import AppShell from './components/layout/app-shell'
-import App from './App'
 
 const rootRoute = createRootRoute({
-  component: AppShell,
+  component: AppShell
 })
+
 
 const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/',
-  component: () => <App />,
+  component: () => <Dashboard />,
 })
 
 
-const routeTree = rootRoute.addChildren([indexRoute])
+const routeTree = rootRoute.addChildren([indexRoute,])
 
 export const router = createRouter({
   routeTree,

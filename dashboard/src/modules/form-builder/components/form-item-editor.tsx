@@ -3,7 +3,7 @@ import React from 'react'
 
 function FormItemEditor() {
   return (
-    <Card className='w-72'>
+    <Card className='w-80'>
         <h1 className='text-lg font-medium'>Form Item Editor</h1>
     </Card>
   )
